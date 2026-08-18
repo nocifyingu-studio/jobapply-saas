@@ -78,6 +78,20 @@ export default function AuthPortal({ mode, onBack, onComplete }: { mode: 'login'
     <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
       <button onClick={onBack} className="absolute top-6 left-6 text-sm text-slate-400 hover:text-white flex items-center gap-2"><ArrowLeft className="h-4 w-4" /> Home</button>
       <div className="w-full max-w-md p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-6">
+        
+        {/* Unified Corporate EWS Entry Portal Link Block */}
+        <div className="w-full p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center space-y-2">
+          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Are you a Corporate Employer / Recruiter?</p>
+          <a 
+            href="https://onhercules.app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center w-full py-2 px-4 rounded-xl bg-white text-slate-950 text-xs font-bold transition-all hover:bg-slate-200"
+          >
+            💼 Launch EWS Verification Gateway ➔
+          </a>
+        </div>
+
         <h2 className="text-2xl font-bold text-center text-white">{tab === 'forgot' ? 'Recover Access' : mode === 'signup' ? 'Create Premium Account' : 'Welcome Back'}</h2>
         {notice && <div className={`p-4 rounded-xl text-xs border ${notice.type === 'success' ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400' : 'bg-rose-500/10 border-rose-500/20 text-rose-400'}`}>{notice.msg}</div>}
         
