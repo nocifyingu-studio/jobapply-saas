@@ -1,0 +1,7 @@
+{
+  "name": "jobapply-saas-root",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd \"frontend/src\" && npm install && npm run build"
+  }
+}
