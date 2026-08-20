@@ -2,6 +2,6 @@
   "name": "jobapply-saas-root",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd \"frontend/src\" && npm ci --omit=dev && npm run build"
+    "build": "cd \"frontend/src\" && npm i --omit=dev && npm run build"
   }
 }
