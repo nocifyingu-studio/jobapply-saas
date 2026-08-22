@@ -1,0 +1,29 @@
+name: Production Static Asset Compilation
+on:
+  push:
+    branches: [ main, master ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Workspace
+        uses: actions/checkout@v3
+
+      - name: Initialize Standard Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Compile and Build Code
+        run: |
+          cd frontend
+          npm install
+          npm run build
+
+      - name: Transfer Distribution Package to Netlify Edge
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './frontend/dist'
+          production-deploy: true
+          netli-auth-token: "NETLIFY_AUTH_TOKEN"
+          site-id: "brilliant-heliotrope-2c4ad3"
