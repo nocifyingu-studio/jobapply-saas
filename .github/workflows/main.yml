@@ -25,5 +25,5 @@ jobs:
         with:
           publish-dir: './frontend/dist'
           production-deploy: true
-          netli-auth-token: "NETLIFY_AUTH_TOKEN"
+          netlify-auth-token: "rzp_live_TOZaTI5SApc5Qs"
           site-id: "brilliant-heliotrope-2c4ad3"
